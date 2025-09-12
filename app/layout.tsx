@@ -38,7 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${montserrat.variable} ${miguerSans.variable}`}>
+      <body 
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${montserrat.variable} ${miguerSans.variable}`}
+        suppressHydrationWarning={true}
+      >
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         <Analytics />
       </body>
