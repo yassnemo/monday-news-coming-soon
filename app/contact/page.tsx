@@ -13,21 +13,12 @@ export default function ContactPage() {
         fontFamily: "var(--font-montserrat), sans-serif",
       }}
     >
-      {/* Logo positioned in top left */}
-      <div className="fixed top-6 left-6 z-40">
-        <img 
-          src="/logo-light.png" 
-          alt="Monday News Logo" 
-          className="w-12 h-12 object-contain"
-        />
-      </div>
-
       {/* Navigation positioned in top right */}
       <Navigation currentPage="contact" />
 
       <div className="hidden lg:flex h-full flex-col max-w-7xl mx-auto">
-        {/* Main content */}
-        <main className="relative z-10 flex flex-row items-center justify-between px-6 lg:px-16 xl:px-20 flex-1 min-h-0 py-4 lg:py-0 gap-16 lg:gap-20 xl:gap-24">
+  {/* Main content */}
+  <main className="relative z-10 flex flex-row items-center justify-between px-6 lg:px-16 xl:px-20 flex-1 min-h-0 pt-20 lg:pt-24 pb-6 gap-16 lg:gap-20 xl:gap-24 overflow-x-hidden">
           {/* Left content - Contact Info */}
           <div className="flex-1 max-w-lg xl:max-w-xl text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold mb-4 lg:mb-6 leading-none text-white" 
@@ -45,66 +36,55 @@ export default function ContactPage() {
             <div className="space-y-4 lg:space-y-6 mb-6 lg:mb-8">
               <div className="flex items-center justify-start space-x-3">
                 <Mail className="w-5 h-5 text-blue-200" />
-                <span className="text-white text-sm sm:text-base">hello@mondaynews.com</span>
+                <span className="text-white text-sm sm:text-base">hello@yerradouani.me</span>
               </div>
               <div className="flex items-center justify-start space-x-3">
-                <Phone className="w-5 h-5 text-blue-200" />
-                <span className="text-white text-sm sm:text-base">+1 (555) 123-4567</span>
+                <Globe className="w-5 h-5 text-blue-200" />
+                <a
+                  href="https://yerradouani.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white text-sm sm:text-base hover:underline"
+                >
+                  yerradouani.me
+                </a>
               </div>
+
               <div className="flex items-center justify-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-200" />
-                <span className="text-white text-sm sm:text-base">San Francisco, CA</span>
+                <span className="text-white text-sm sm:text-base">Casablanca, MA</span>
               </div>
-              <div className="flex items-center justify-start space-x-3">
-                <Clock className="w-5 h-5 text-blue-200" />
-                <span className="text-white text-sm sm:text-base">Mon-Fri, 9AM-6PM PST</span>
-              </div>
-            </div>
-
-            {/* Social icons */}
-            <div className="flex items-center justify-start space-x-4">
-              <Linkedin className="w-5 h-5 lg:w-6 lg:h-6 text-white hover:text-blue-200 cursor-pointer transition-colors" />
-              <Github className="w-5 h-5 lg:w-6 lg:h-6 text-white hover:text-blue-200 cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 lg:w-6 lg:h-6 text-white hover:text-blue-200 cursor-pointer transition-colors" />
-              <Globe className="w-5 h-5 lg:w-6 lg:h-6 text-white hover:text-blue-200 cursor-pointer transition-colors" />
             </div>
           </div>
 
           {/* Right content - Contact Form */}
           <div className="flex-shrink-0 max-w-lg w-full">
-            <div className="bg-blue-800/20 backdrop-blur-sm rounded-lg p-6 lg:p-8 border border-blue-700/50">
-              <h2 className="text-xl lg:text-2xl font-semibold text-white mb-6 text-center">Send us a message</h2>
+            <h2 className="text-xl lg:text-2xl font-semibold text-white mb-6 text-left">Say hello</h2>
 
-              <div className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Input
-                    type="text"
-                    placeholder="First name"
-                    className="bg-blue-800 border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500"
-                  />
-                  <Input
-                    type="text"
-                    placeholder="Last name"
-                    className="bg-blue-800 border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500"
-                  />
-                </div>
-                <Input
+            <div className="space-y-8">
+              <div className="relative">
+                <input
                   type="email"
                   placeholder="Your email"
-                  className="bg-blue-800 border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500"
+                  className="w-full bg-transparent border-0 border-b border-white/30 text-white placeholder:text-white/50 focus:border-white focus:outline-none pb-2 transition-colors duration-200 px-0"
                 />
-                <Input
-                  type="text"
-                  placeholder="Subject"
-                  className="bg-blue-800 border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500"
-                />
-                <textarea
-                  placeholder="Your message..."
-                  rows={5}
-                  className="w-full bg-blue-800 border border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500 rounded-md px-3 py-2 resize-none"
-                />
-                <Button className="bg-black hover:bg-gray-800 text-white w-full py-3">Send Message</Button>
               </div>
+              <div className="relative">
+                <div className="mb-1">
+                  <span className="text-white/50 text-sm">Message</span>
+                </div>
+                <div className="border-b border-white/30 focus-within:border-white transition-colors duration-200">
+                  <textarea
+                    placeholder=""
+                    rows={4}
+                    className="w-full bg-transparent border-0 text-white focus:outline-none pb-2 resize-none px-0"
+                  />
+                </div>
+              </div>
+              <Button className="bg-black hover:bg-gray-800 text-white w-full py-3 flex items-center justify-center gap-2 mt-8">
+                <span>▶</span>
+                Send message
+              </Button>
             </div>
           </div>
         </main>
@@ -117,7 +97,7 @@ export default function ContactPage() {
 
       <div className="lg:hidden h-full flex flex-col overflow-y-auto">
         {/* Mobile Main Content */}
-        <main className="flex-1 px-4 pb-4 flex flex-col justify-center pt-20">
+  <main className="flex-1 px-4 pb-4 flex flex-col justify-start pt-24">
           {/* Title */}
           <div className="text-center mb-8">
             <h1 className="text-5xl font-bold text-white leading-tight mb-4" 
@@ -162,38 +142,33 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-blue-800/20 backdrop-blur-sm rounded-lg p-4 border border-blue-700/50">
-            <h2 className="text-xl font-semibold text-white mb-4 text-center">Send us a message</h2>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-4 text-left">Say hello</h2>
 
-            <div className="space-y-3">
-              <div className="grid grid-cols-2 gap-3">
-                <Input
-                  type="text"
-                  placeholder="First name"
-                  className="bg-blue-800 border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500 text-sm"
-                />
-                <Input
-                  type="text"
-                  placeholder="Last name"
-                  className="bg-blue-800 border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500 text-sm"
+            <div className="space-y-8">
+              <div className="relative">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="w-full bg-transparent border-0 border-b border-white/30 text-white placeholder:text-white/50 focus:border-white focus:outline-none pb-2 transition-colors duration-200 px-0 text-sm"
                 />
               </div>
-              <Input
-                type="email"
-                placeholder="Your email"
-                className="bg-blue-800 border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500 text-sm"
-              />
-              <Input
-                type="text"
-                placeholder="Subject"
-                className="bg-blue-800 border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500 text-sm"
-              />
-              <textarea
-                placeholder="Your message..."
-                rows={4}
-                className="w-full bg-blue-800 border border-blue-700 text-white placeholder:text-blue-300 focus:border-blue-500 rounded-md px-3 py-2 resize-none text-sm"
-              />
-              <Button className="bg-black hover:bg-gray-800 text-white w-full py-3">Send Message</Button>
+              <div className="relative">
+                <div className="mb-1">
+                  <span className="text-white/50 text-sm">Message</span>
+                </div>
+                <div className="border-b border-white/30 focus-within:border-white transition-colors duration-200">
+                  <textarea
+                    placeholder=""
+                    rows={3}
+                    className="w-full bg-transparent border-0 text-white focus:outline-none pb-2 resize-none px-0 text-sm"
+                  />
+                </div>
+              </div>
+              <Button className="bg-black hover:bg-gray-800 text-white w-full py-3 flex items-center justify-center gap-2 mt-6">
+                <span>▶</span>
+                Send message
+              </Button>
             </div>
           </div>
         </main>
