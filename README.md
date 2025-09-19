@@ -1,3 +1,4 @@
+# [Monday News](https://mondaynews.yerradouani.me/) &middot;
 ## Monday News — Coming Soon
 
 ### What it is
