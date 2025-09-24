@@ -1,9 +1,23 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Linkedin, Github, Twitter, Globe, Mail, Phone, MapPin, Clock } from "lucide-react"
 import { Navigation } from "@/components/Navigation"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact Us - Monday News",
+  description: "Get in touch with the Monday News team. Contact us for support, partnerships, or general inquiries. We're based in Casablanca, Morocco.",
+  keywords: ["contact", "monday news", "support", "help", "get in touch", "casablanca", "morocco", ],
+  openGraph: {
+    title: "Contact Us - Monday News",
+    description: "Get in touch with the Monday News team. Contact us for support, partnerships, or general inquiries.",
+    url: "https://mondaynews.yerradouani.me/contact",
+  },
+  twitter: {
+    title: "Contact Us - Monday News",
+    description: "Get in touch with the Monday News team. Contact us for support, partnerships, or general inquiries.",
+  },
+}
 
 export default function ContactPage() {
   return (
