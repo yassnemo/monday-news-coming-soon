@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { PageTransition } from "@/components/PageTransition"
 import "./globals.css"
 
 const montserrat = Montserrat({
@@ -42,7 +43,9 @@ export default function RootLayout({
         className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${montserrat.variable} ${miguerSans.variable}`}
         suppressHydrationWarning={true}
       >
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <PageTransition>{children}</PageTransition>
+        </Suspense>
         <Analytics />
       </body>
     </html>
