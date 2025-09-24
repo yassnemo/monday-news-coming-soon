@@ -1,0 +1,39 @@
+{
+  "name": "Monday News - Personalized News Platform",
+  "short_name": "Monday News",
+  "description": "Monday News delivers personalized news stories powered by News API. Get tailored updates from global events to specialized topics.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#3644ed",
+  "theme_color": "#3644ed",
+  "orientation": "portrait-primary",
+  "categories": ["news", "productivity", "entertainment"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/favicon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/logo-light.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/home-page-phone.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
