@@ -54,7 +54,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
           items={menuItems}
           socialItems={socialItems}
           displaySocials={true}
-          displayItemNumbering={true}
+          displayItemNumbering={false}
           logoUrl="/logo-light.png"
           menuButtonColor="#ffffff"
           openMenuButtonColor="#000000"
