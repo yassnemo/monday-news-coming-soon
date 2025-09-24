@@ -11,21 +11,12 @@ export default function SupportPage() {
         fontFamily: "var(--font-montserrat), sans-serif",
       }}
     >
-      {/* Logo positioned in top left */}
-      <div className="fixed top-6 left-6 z-40">
-        <img 
-          src="/logo-light.png" 
-          alt="Monday News Logo" 
-          className="w-12 h-12 object-contain"
-        />
-      </div>
-
       {/* Navigation positioned in top right */}
       <Navigation currentPage="support" />
 
       <div className="hidden lg:flex h-full flex-col max-w-7xl mx-auto">
         {/* Main content */}
-        <main className="relative z-10 flex flex-col items-center justify-start px-6 lg:px-16 xl:px-20 flex-1 min-h-0 py-8 lg:py-12">
+  <main className="relative z-10 flex flex-col items-center justify-start px-6 lg:px-16 xl:px-20 flex-1 min-h-0 pt-28 lg:pt-36 pb-8 lg:pb-12 overflow-x-hidden">
           <div className="max-w-4xl w-full text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 lg:mb-8 leading-none text-white" 
                 style={{fontFamily: "var(--font-miguer-sans), sans-serif"}}>
@@ -67,7 +58,7 @@ export default function SupportPage() {
 
       <div className="lg:hidden h-full flex flex-col overflow-y-auto">
         {/* Mobile Main Content */}
-        <main className="flex-1 px-4 pb-4 flex flex-col justify-center pt-20">
+  <main className="flex-1 px-4 pb-4 flex flex-col justify-start pt-28">
           {/* Title */}
           <div className="text-center mb-8">
             <h1 className="text-5xl font-bold text-white leading-tight" 
