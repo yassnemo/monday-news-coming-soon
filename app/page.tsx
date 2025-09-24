@@ -18,7 +18,7 @@ export default function HomePage() {
 
       <div className="hidden lg:flex h-full flex-col">
         {/* Main content */}
-        <main className="relative z-10 flex flex-row items-center justify-between pl-8 lg:pl-12 xl:pl-16 pr-6 lg:pr-16 xl:pr-20 flex-1 min-h-0 py-4 lg:py-0 gap-6 lg:gap-8 xl:gap-10">
+  <main className="relative z-10 flex flex-row items-center justify-between pl-8 lg:pl-12 xl:pl-16 pr-6 lg:pr-16 xl:pr-20 flex-1 min-h-0 py-4 lg:py-0 gap-6 lg:gap-8 xl:gap-10 overflow-x-hidden">
           {/* Left content */}
           <div className="flex-1 max-w-2xl xl:max-w-3xl text-left pl-8 lg:pl-12 xl:pl-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 lg:mb-8 leading-none text-white" 
