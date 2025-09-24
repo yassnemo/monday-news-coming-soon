@@ -89,8 +89,9 @@
     @apply border-border outline-ring/50;
   }
   /* Removed bg-background from body to prevent white background override */
-  body {
-    @apply text-foreground;
+  html, body {
+    @apply text-foreground overflow-hidden;
+    height: 100vh;
   }
 }
 
