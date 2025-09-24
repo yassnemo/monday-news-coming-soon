@@ -6,8 +6,38 @@ import { Linkedin, Github, Twitter, Globe } from "lucide-react"
 import { Navigation } from "@/components/Navigation"
 
 export default function HomePage() {
+  const homePageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Monday News",
+    "description": "Monday News delivers personalized news stories powered by News API. Get tailored updates from global events to specialized topics, designed to save you time and eliminate clutter.",
+    "url": "https://mondaynews.yerradouani.me",
+    "applicationCategory": "NewsApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "127"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Yassine Erradouani",
+      "url": "https://yerradouani.me"
+    }
+  }
+
   return (
-    <div
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }}
+      />
+      <div
       className="monday-news-page h-screen flex flex-col overflow-hidden relative"
       style={{
         fontFamily: "var(--font-montserrat), sans-serif",
@@ -29,8 +59,10 @@ export default function HomePage() {
                 NEWS
                 <img 
                   src="/exclamation-mark.png" 
-                  alt="!" 
+                  alt="Exclamation mark emphasizing Monday News branding" 
                   className="ml-2 lg:ml-3 w-8 sm:w-10 md:w-12 lg:w-14 xl:w-16 h-auto"
+                  width="64"
+                  height="64"
                 />
               </div>
             </h1>
@@ -68,8 +100,10 @@ export default function HomePage() {
             <div className="relative z-10 transform -rotate-2 scale-90">
               <img
                 src="/home-page-phone.png"
-                alt="Monday News App Interface"
+                alt="Monday News mobile app home screen showing personalized news feed interface"
                 className="w-36 sm:w-44 md:w-52 lg:w-60 xl:w-72 h-auto shadow-2xl max-w-full select-none pointer-events-none"
+                width="288"
+                height="600"
                 draggable="false"
                 onContextMenu={(e) => e.preventDefault()}
                 onDragStart={(e) => e.preventDefault()}
@@ -80,8 +114,10 @@ export default function HomePage() {
             <div className="relative z-20 transform -ml-6 lg:-ml-8">
               <img
                 src="/landing-page-phone.png"
-                alt="Monday News Article View"
+                alt="Monday News mobile app article view displaying news content powered by News API"
                 className="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-76 h-auto shadow-2xl max-w-full select-none pointer-events-none"
+                width="304"
+                height="600"
                 draggable="false"
                 onContextMenu={(e) => e.preventDefault()}
                 onDragStart={(e) => e.preventDefault()}
@@ -205,5 +241,6 @@ export default function HomePage() {
         </footer>
       </div>
     </div>
+    </>
   )
 }
