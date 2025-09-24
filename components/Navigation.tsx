@@ -46,7 +46,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentPage }) => {
   ]
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full z-50 pointer-events-none">
+    <div className="fixed top-0 left-0 w-full h-full z-50 pointer-events-none overflow-hidden">
       <div className="w-full h-full [&_.staggered-menu-wrapper]:pointer-events-auto">
         <StaggeredMenu
           position="right"
